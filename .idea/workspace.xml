@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="880aee7e-afb9-44ea-a716-281d2f096ddc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/7NationArmy.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/caller/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/command.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/dbconf.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/goose_binaries/darwin_64bit/goose" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/goose_binaries/linux_64bit/goose" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20181022104307_SetUpDatabase.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20181022113900_anchorsTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20181119111446_AddDefaultValuesForStats.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20181119161640_AddTableSites.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20181119162256_AlterTeamsIdToInt64.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20181119162436_AlterPlayersIdToInt64.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20181119162818_AlterSessionsIdToInt64.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20181119163114_AlterPlaysIdToInt64.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20181119163442_RenamePlayersPlays.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20181119163506_RenameTagsPlayers.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20181121150823_AlterTagsPlayersToInt64.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190131113721_AddEoEToFlights.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190404172250_AddColumnsToFlights.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190417142051_ChangeFlightIDToInt64.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190418112537_AddUsersTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190418172911_AddVarianceToProcessedPackets.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190425122736_AddIMULockToProcessedPackets.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190502163857_DeleteSitesTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190502164118_AlterAnchorsTableNameToSites.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190502164247_AddDimensionsToSites.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190503105712_AddTypeToSite.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190503120236_AddHitPostToFlights.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190509101822_AddMaxHeightToFlights.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190711162055_AddSpinClosestCorrToFlights.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190820111611_AddOrganizationsTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190820112855_AddOrganizationForeignKeyToTeams.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190820115808_AddUsersForeignKeyToPlayers.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190820120123_AddCoachesTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190820120415_DropDataTables.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190820142817_RenameSitesToPitches.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190820151406_AddAnchorsTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190820153221_UpdateTagsTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190820153638_AddTagsTeamsTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190820153930_UpdateSensorsTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190820154119_AddSensorsTeamsTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190820160529_AddTagsTeamsPlayersSessionsTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190820161332_AddForeignKeysOnPlayersSessions.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190820162903_AddTeamsSessionsTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190820164247_RemoveTeamColumnsFromSessionsTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190820165244_AddEventsTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190820170339_RenamePlaysToScrums.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190820171022_RenamePlayerPlays.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190820172815_UpdateFlightsTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190904161625_AddUniqueConstraintOnUserEmail.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190911131242_RemoveRequirementForSensor.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190911131728_DropTagsPlayersTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20190911132855_ChangeTagIDonPlayerSessionsToTagTeamID.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20191016100154_AddNamesToUsers.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20191017165449_RemoveHardwareIDFromTags.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20191018103710_UpdateFlightsTagIDsToUInt32.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20191105152634_CreateStatsTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20191105152913_DropTagTeamsPlayerSessionTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20191105153300_AlterPlayerSessionWithNewFields.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20191105154815_AddSettingsTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20191108102732_AddPermissionLevelToUser.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20191111154557_ChangePlayerSessionIDToInt8.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20191111155609_ChangeStatsIDToInt8.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20191114104418_ChangeConfigToPitchConfigOnSession.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20191114165334_AddCascadeToTeamSessionsOnSessionID.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20191122102328_AddSpeedBandsToStats.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20191122114528_AddPitchIDToSessions.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20191122114826_AddForeginKeyPitchIDToSessions.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20191203152457_AddCoefficientsToFlights.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20200122111957_AddThreeWordsToOrganisations.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20200122134629_AllowNullUserIDForPlayeres.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20200122135038_AddUniqueIndexOnThreeWords.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20200127145803_CreatePlayerTeamTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20200127150038_AddKeysToPlayerTeams.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20200127150401_RemoveTeamIDFromPlayer.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20200128095434_AddTeamIDToPlayerSession.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20200128100047_ChangeCascadeToNullOnPlayerSessions.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/pgRestore/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/pgRestore/dump_restore.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/pgRestore/dump_restore.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/pgRestore/restore_metrics_server_dev.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/rdsConnect/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/rdsConnect/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/rdsConnect/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/rdsConnect/rds-ca-2019-root.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/rdsConnect/tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/rdsConnect/tmp_s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/rdsExecuteFileSql/duplicate_user_local.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/rdsExecuteFileSql/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/sendingFilesEndpoints/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serviceExtractUserdata/dbReplica/export_queries.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serviceExtractUserdata/dbReplica/replica.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serviceExtractUserdata/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serviceExtractUserdata/rds-ca-2019-root.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serviceExtractUserdata/sendFiles/dump_restore.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serviceExtractUserdata/sendFiles/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/duplicate_user_local.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/duplicate_user_local.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/main.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="7NationArmy" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1WWLPBaXGfSBYoUtHHwpPP01bf0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/serviceExtractUserdata" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/serviceExtractUserdata" />
+      <recent name="$PROJECT_DIR$/serviceExtractUserdata/sendFiles" />
+      <recent name="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS" />
+      <recent name="$PROJECT_DIR$/sandbox/rdsExecuteFileSql" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/serviceExtractUserdata" />
+      <recent name="$PROJECT_DIR$/sandbox" />
+      <recent name="$PROJECT_DIR$/serviceExtractUserdata/dbReplica" />
+      <recent name="$PROJECT_DIR$/sender" />
+      <recent name="$PROJECT_DIR$/receiver" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build serviceExtractUserData (1)">
+    <configuration name="go build ConnectToRDS (4)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="7NationArmy" />
+      <working_directory value="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS" />
+      <kind value="DIRECTORY" />
+      <filePath value="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/main.go" />
+      <package value="ConnectToRDS" />
+      <directory value="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build ConnectToRDS" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="7NationArmy" />
+      <working_directory value="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS" />
+      <kind value="DIRECTORY" />
+      <filePath value="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/main.go" />
+      <package value="ConnectToRDS" />
+      <directory value="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build serviceExtractUserData (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="7NationArmy" />
+      <working_directory value="$PROJECT_DIR$/serviceExtractUserdata" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/serviceExtractUserdata/main.go" />
+      <package value="serviceExtractUserData" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build serviceExtractUserData" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="7NationArmy" />
+      <working_directory value="$PROJECT_DIR$/serviceExtractUserdata" />
+      <kind value="DIRECTORY" />
+      <filePath value="$PROJECT_DIR$/serviceExtractUserdata/sendFiles/main.go" />
+      <package value="serviceExtractUserData/sendFiles" />
+      <directory value="$PROJECT_DIR$/serviceExtractUserdata" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build serviceExtractUserData" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="7NationArmy" />
+      <working_directory value="$PROJECT_DIR$/serviceExtractUserdata" />
+      <kind value="DIRECTORY" />
+      <filePath value="$PROJECT_DIR$/serviceExtractUserdata/sendFiles/main.go" />
+      <package value="serviceExtractUserData/sendFiles" />
+      <directory value="$PROJECT_DIR$/serviceExtractUserdata" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build serviceExtractUserData/sendFiles" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="7NationArmy" />
+      <working_directory value="$PROJECT_DIR$/serviceExtractUserdata" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/serviceExtractUserdata/sendFiles/main.go" />
+      <package value="serviceExtractUserData/sendFiles" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="serviceExtractUserData/sendFiles" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="7NationArmy" />
+      <working_directory value="$PROJECT_DIR$/serviceExtractUserdata/sendFiles" />
+      <kind value="DIRECTORY" />
+      <filePath value="$PROJECT_DIR$/serviceExtractUserdata/sendFiles/main.go" />
+      <package value="serviceExtractUserData/sendFiles" />
+      <directory value="$PROJECT_DIR$/serviceExtractUserdata/sendFiles" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Build.go build ConnectToRDS (4)" />
+      <item itemvalue="Go Build.go build serviceExtractUserData" />
+      <item itemvalue="Go Build.serviceExtractUserData/sendFiles" />
+      <item itemvalue="Go Build.go build serviceExtractUserData (1)" />
+      <item itemvalue="Go Build.go build serviceExtractUserData/sendFiles" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build serviceExtractUserData (1)" />
+        <item itemvalue="Go Build.go build serviceExtractUserData/sendFiles" />
+        <item itemvalue="Go Build.serviceExtractUserData/sendFiles" />
+        <item itemvalue="Go Build.go build serviceExtractUserData" />
+        <item itemvalue="Go Build.go build serviceExtractUserData" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2338" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580833059552">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2338" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580833059552" />
+    <state x="470" y="219" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580229894701" />
+    <state x="2551" y="343" width="675" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579532488537">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2551" y="343" width="675" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579532488537" />
+    <state x="667" y="248" width="642" height="609" key="#go_build_ConnectToRDS" timestamp="1580226300491">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="667" y="248" width="642" height="609" key="#go_build_ConnectToRDS/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580226300491" />
+    <state x="667" y="248" width="642" height="609" key="#go_build_ConnectToRDS_(1)" timestamp="1580226320791">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="667" y="248" width="642" height="609" key="#go_build_ConnectToRDS_(1)/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580226320791" />
+    <state x="2542" y="227" width="642" height="609" key="#go_build_ConnectToRDS_(2)" timestamp="1580470684015">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2542" y="227" key="#go_build_ConnectToRDS_(2)/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580470684015" />
+    <state x="667" y="248" width="642" height="609" key="#go_build_ConnectToRDS_(2)/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580230034562" />
+    <state x="667" y="248" width="642" height="609" key="#go_build_ConnectToRDS_(3)" timestamp="1580231916378">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="667" y="248" width="642" height="609" key="#go_build_ConnectToRDS_(3)/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580231916378" />
+    <state x="2554" y="234" width="642" height="609" key="#go_build_ConnectToRDS_(4)" timestamp="1580478484107">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2554" y="234" width="642" height="609" key="#go_build_ConnectToRDS_(4)/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580478484107" />
+    <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1580812639321">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580812639320" />
+    <state width="1874" height="357" key="GridCell.Tab.0.bottom" timestamp="1580836955450">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="357" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580836955450" />
+    <state width="1874" height="354" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580470564999" />
+    <state width="1874" height="357" key="GridCell.Tab.0.center" timestamp="1580836955449">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="357" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580836955449" />
+    <state width="1874" height="354" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580470564999" />
+    <state width="1874" height="357" key="GridCell.Tab.0.left" timestamp="1580836955449">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="357" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580836955449" />
+    <state width="1874" height="354" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580470564999" />
+    <state width="1874" height="357" key="GridCell.Tab.0.right" timestamp="1580836955449">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="357" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580836955449" />
+    <state width="1874" height="354" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580470564999" />
+    <state width="1874" height="294" key="GridCell.Tab.1.bottom" timestamp="1580836769205">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="294" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580836769205" />
+    <state width="1874" height="354" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580470564999" />
+    <state width="1874" height="294" key="GridCell.Tab.1.center" timestamp="1580836769205">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="294" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580836769205" />
+    <state width="1874" height="354" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580470564999" />
+    <state width="1874" height="294" key="GridCell.Tab.1.left" timestamp="1580836769205">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="294" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580836769205" />
+    <state width="1874" height="354" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580470564999" />
+    <state width="1874" height="294" key="GridCell.Tab.1.right" timestamp="1580836769205">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="294" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580836769205" />
+    <state width="1874" height="354" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580470564999" />
+    <state x="2369" y="174" key="SettingsEditor" timestamp="1580811973365">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2369" y="174" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580811973365" />
+    <state x="500" y="197" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580225660962" />
+    <state width="960" height="541" key="XDebugger.FullValuePopup" timestamp="1580833106490">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="960" height="541" key="XDebugger.FullValuePopup/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580833106490" />
+    <state x="2415" y="278" width="920" height="522" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1580833070999">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2415" y="278" width="920" height="522" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580833070999" />
+    <state x="2528" y="270" width="704" height="538" key="find.popup" timestamp="1580836508662">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2528" y="270" width="704" height="538" key="find.popup/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580836508662" />
+  </component>
+</project>
