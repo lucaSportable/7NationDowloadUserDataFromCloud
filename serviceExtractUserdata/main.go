@@ -15,6 +15,7 @@ import (
 
 
 func localUserData(w http.ResponseWriter, r*http.Request) {
+	start := time.Now()
 	segs := strings.Split(r.URL.Path, "/")
 	if len(segs) < 3 {
 		w.WriteHeader(http.StatusNotFound)
@@ -22,12 +23,18 @@ func localUserData(w http.ResponseWriter, r*http.Request) {
 		return
 	}
 	userId := segs[2]
+	if len(userId)==0{
+		userId="defaultTmpDatabase"
+	}
+	sendFile:=userId+".gz"//time.Now().String()+".gz"
+	w.Header().Set("Content-Disposition", "attachment; filename="+sendFile)
 
 	if err :=dbReplica.ExportUserData(userId,w);err != nil {
 		http.Error(w, err.Error(), 500)
 		return
 	}
-	w.Header().Set("Content-Disposition", "attachment; filename="+userId+time.Now().String()+".gz")
+	fmt.Println("totalEndpoint:"+time.Now().Sub(start).String())
+
 }
 
 

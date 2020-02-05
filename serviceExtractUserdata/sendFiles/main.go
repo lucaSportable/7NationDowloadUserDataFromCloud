@@ -43,6 +43,7 @@ func DumpPostgres(databaseName string, writer io.Writer) error{
 	// execute command
 	cmd := exec.Command("pg_dump", "-Z6", "--dbname=postgresql://metrics_server:"+os.Getenv("SPORTABLEDB")+"@127.0.0.1:5432/"+databaseName)
 	cmd.Stdout = writer
+
 	err := cmd.Run()
 	return err
 }

@@ -113,13 +113,10 @@ func ExportQueries(db *gorm.DB,dest string,userId string){
         ` players.id = player_team.player_id and player_team.team_id IN (select distinct teams.id from teams,players,coaches`+
 		` where teams.id = coaches.team_id AND coaches.user_id = `+userId+
 		` );') as players_sessions_scrums(id int4,player_session_id int8,scrum_id int8,scrum_index int4);`,
-		// export goose version
-		`INSERT INTO goose_db_version(id,version_id,is_applied,tstamp) SELECT * FROM dblink(`+dest+
-		`,'SELECT * FROM goose_db_version WHERE version_id=(SELECT MAX(version_id) FROM goose_db_version)')`+
-		`as goose_db_version(id int4,version_id int8,is_applied bool,tstamp timestamp);`,
 	}
 	for _,query := range querys{
-		err := db.Exec(query).Error
-		TmpLogError(errors.New(query+err.Error()))
+		if 	err := db.Exec(query).Error;err != nil {
+			TmpLogError(errors.New(query + err.Error()))
+		}
 	}
 }

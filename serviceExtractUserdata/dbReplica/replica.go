@@ -11,6 +11,7 @@ import (
 	"log"
 	"os"
 	"os/exec"
+	"time"
 )
 
 const (
@@ -37,7 +38,7 @@ func CreateTmpUserDataDB(db*gorm.DB, dbname string)(err error){
 	return nil
 }
 
-func connString(dbname string)string{
+func connString(dbname string, localhost bool)string{
 	cfg, err := external.LoadDefaultAWSConfig()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "failed to load configuration, %v", err)
@@ -52,13 +53,18 @@ func connString(dbname string)string{
 		log.Fatal("Creating auth token error: ", err)
 	}
 
+	if localhost{
+		return fmt.Sprintf("'host=localhost user=%s dbname=%s password=%s'",dbUser,dbname,authToken)
+	}
 	//Use db to perform SQL operations on database
-	return fmt.Sprintf("host=%v user=%v dbname=%v password=%v port=%v sslmode=verify-full sslrootcert=%v", dbEndpoint, dbUser, dbname, authToken, dbPort, cert)
+	remoteConnString := fmt.Sprintf("host=%v user=%v dbname=%v password=%v port=%v sslmode=verify-full sslrootcert=%v", dbEndpoint, dbUser, dbname, authToken, dbPort, cert)
+	//fmt.Println(remoteConnString)
+	return remoteConnString
 }
 
 // RdsConnect connects to the default instance of rds ton the specified database.
 func RdsConnect(dbname string)(db *gorm.DB){
-	conn := connString(dbname )
+	conn := connString(dbname,false )
 	db, err := gorm.Open("postgres", conn)
 	if err != nil {
 		log.Fatal("Opening DB conn error: ", err)
@@ -69,10 +75,10 @@ func RdsConnect(dbname string)(db *gorm.DB){
 // createSessionDB creates a new postgres database for a session and returns a connection to it.
 func DeleteTmpUserDataDB(db*gorm.DB, dbname string){
 	// delete the target database
-	command := fmt.Sprintf("drop database %s", dbname)
-	errs := db.Exec(command).GetErrors()
-	if len(errs) > 0 {
-		log.Fatal("Deleting DB conn error: ", errs[0])
+	command := fmt.Sprintf("drop database \"%s\"", dbname)
+	err := db.Exec(command).Error
+	if err !=nil {
+		log.Fatal("Deleting DB conn error: ", err)
 	}
 	// Return a connection to the new database
 	return
@@ -92,14 +98,17 @@ func MigrateSchema(DB *sql.DB,dest string, userId string) {
 	}
 	version, err:= goose.GetMostRecentDBVersion(migrationPath)
 	TmpLogError(err)
+	// execution time
+	start := time.Now()
 	err = goose.RunMigrationsOnDb(&conf, migrationPath, version, DB)
+	fmt.Println("migrationTime:"+time.Now().Sub(start).String())
+
 	TmpLogError(err)
-
 	fmt.Println("to execute\n",dest)
-
 	// Execute all the import queries
 	gdb, err := gorm.Open("postgres", DB)
 	TmpLogError(err)
+
 	ExportQueries(gdb,dest,userId)
 }
 
@@ -112,10 +121,8 @@ func ExportUserData(userId string,w io.Writer)error{
 	}
 	cfg.Region = awsRegion
 	dbNameToSave := userId
-	// create database for that id
-	if err:= CreateTmpUserDataDB(RdsConnect(DbNameOrigin), dbNameToSave); err !=nil{
-		return err
-	}
+	// create database for that id log in case of error
+	TmpLogError(CreateTmpUserDataDB(RdsConnect(DbNameOrigin), dbNameToSave))
 	// connect to origin and destination and defer
 	dbMaster := RdsConnect(DbNameOrigin)
 	dbSlave := RdsConnect(dbNameToSave)
@@ -127,7 +134,7 @@ func ExportUserData(userId string,w io.Writer)error{
 		dbMaster.Close()
 	}()
 	// use the user id to create the replica
-	MigrateSchema(dbSlave.DB(),connString(dbNameToSave), userId)
+	MigrateSchema(dbSlave.DB(),connString(DbNameOrigin,true), userId)
 	// do the pdg dump and respond with the file itself
 	if err:= DumpPostgres(dbNameToSave, w); err !=nil{
 		return err
@@ -138,7 +145,7 @@ func ExportUserData(userId string,w io.Writer)error{
 // DumpPostgres dump from postgres.
 func DumpPostgres(databaseName string, writer io.Writer) error{
 	// execute command
-	cmd := exec.Command("pg_dump", "-Z6", "--dbname=postgresql://metrics_server:"+os.Getenv("SPORTABLEDB")+"@127.0.0.1:5432/"+databaseName)
+	cmd := exec.Command("pg_dump", "-Z6", connString(databaseName,false))
 	cmd.Stdout = writer
 	err := cmd.Run()
 	return err
