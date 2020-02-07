@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="880aee7e-afb9-44ea-a716-281d2f096ddc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/7NationArmy.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caller/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/command.sh" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/dbconf.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/goose_binaries/darwin_64bit/goose" afterDir="false" />
@@ -86,29 +77,18 @@
       <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20200127150401_RemoveTeamIDFromPlayer.sql" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20200128095434_AddTeamIDToPlayerSession.sql" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/db/migrations/20200128100047_ChangeCascadeToNullOnPlayerSessions.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/pgRestore/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/pgRestore/dump_restore.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/pgRestore/dump_restore.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/pgRestore/restore_metrics_server_dev.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/rdsConnect/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/rdsConnect/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/rdsConnect/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/rdsConnect/rds-ca-2019-root.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/rdsConnect/tmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/rdsConnect/tmp_s" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/rdsExecuteFileSql/duplicate_user_local.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/rdsExecuteFileSql/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/sendingFilesEndpoints/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serviceExtractUserdata/dbReplica/export_queries.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serviceExtractUserdata/dbReplica/replica.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serviceExtractUserdata/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serviceExtractUserdata/rds-ca-2019-root.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serviceExtractUserdata/sendFiles/dump_restore.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serviceExtractUserdata/sendFiles/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/zipFiles/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/oliExample/examples" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/oliExample/examples" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/duplicate_user_local.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/duplicate_user_local.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/export_queries.go" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/export_queries.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/rdsConnect/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/rdsConnect/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/rdsPgDump/command.sh" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/rdsPgDump/command.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serviceExtractUserdata/dbReplica/replica.go" beforeDir="false" afterPath="$PROJECT_DIR$/serviceExtractUserdata/dbReplica/replica.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serviceExtractUserdata/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/serviceExtractUserdata/go.mod" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +107,7 @@
   </component>
   <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS" />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
@@ -157,15 +137,24 @@
       <recent name="$PROJECT_DIR$/sandbox/rdsExecuteFileSql" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/serviceExtractUserdata/dbReplica" />
+      <recent name="$PROJECT_DIR$/serviceExtractUserdata/sendFiles" />
       <recent name="$PROJECT_DIR$/serviceExtractUserdata" />
       <recent name="$PROJECT_DIR$/sandbox" />
-      <recent name="$PROJECT_DIR$/serviceExtractUserdata/dbReplica" />
       <recent name="$PROJECT_DIR$/sender" />
-      <recent name="$PROJECT_DIR$/receiver" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build serviceExtractUserData (1)">
-    <configuration name="go build ConnectToRDS (4)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build main.go">
+    <configuration name="go build ConnectToRDS (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="7NationArmy" />
+      <working_directory value="$PROJECT_DIR$/sandbox/rdsConnect" />
+      <kind value="DIRECTORY" />
+      <filePath value="$PROJECT_DIR$/sandbox/rdsConnect/main.go" />
+      <package value="ConnectToRDS" />
+      <directory value="$PROJECT_DIR$/sandbox/rdsConnect" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build ConnectToRDS" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="7NationArmy" />
       <working_directory value="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS" />
       <kind value="DIRECTORY" />
@@ -181,6 +170,14 @@
       <filePath value="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS/main.go" />
       <package value="ConnectToRDS" />
       <directory value="$PROJECT_DIR$/sandbox/oliExample/examples/ConnectToRDS" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="7NationArmy" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/sandbox/zipFiles/main.go" />
+      <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
     <configuration name="go build serviceExtractUserData (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -201,47 +198,30 @@
       <directory value="$PROJECT_DIR$/serviceExtractUserdata" />
       <method v="2" />
     </configuration>
-    <configuration name="go build serviceExtractUserData" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="7NationArmy" />
-      <working_directory value="$PROJECT_DIR$/serviceExtractUserdata" />
-      <kind value="DIRECTORY" />
-      <filePath value="$PROJECT_DIR$/serviceExtractUserdata/sendFiles/main.go" />
-      <package value="serviceExtractUserData/sendFiles" />
-      <directory value="$PROJECT_DIR$/serviceExtractUserdata" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build serviceExtractUserData/sendFiles" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build serviceExtractUserData/dbCsvReplica" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="7NationArmy" />
       <working_directory value="$PROJECT_DIR$/serviceExtractUserdata" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/serviceExtractUserdata/sendFiles/main.go" />
-      <package value="serviceExtractUserData/sendFiles" />
+      <filePath value="$PROJECT_DIR$/serviceExtractUserdata/dbCsvReplica/main.go" />
+      <package value="serviceExtractUserData/dbCsvReplica" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="serviceExtractUserData/sendFiles" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
-      <module name="7NationArmy" />
-      <working_directory value="$PROJECT_DIR$/serviceExtractUserdata/sendFiles" />
-      <kind value="DIRECTORY" />
-      <filePath value="$PROJECT_DIR$/serviceExtractUserdata/sendFiles/main.go" />
-      <package value="serviceExtractUserData/sendFiles" />
-      <directory value="$PROJECT_DIR$/serviceExtractUserdata/sendFiles" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Go Build.go build ConnectToRDS (4)" />
       <item itemvalue="Go Build.go build serviceExtractUserData" />
-      <item itemvalue="Go Build.serviceExtractUserData/sendFiles" />
       <item itemvalue="Go Build.go build serviceExtractUserData (1)" />
-      <item itemvalue="Go Build.go build serviceExtractUserData/sendFiles" />
+      <item itemvalue="Go Build.go build ConnectToRDS" />
+      <item itemvalue="Go Build.go build ConnectToRDS (1)" />
+      <item itemvalue="Go Build.go build serviceExtractUserData/dbCsvReplica" />
+      <item itemvalue="Go Build.go build main.go" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go build serviceExtractUserData/dbCsvReplica" />
+        <item itemvalue="Go Build.go build ConnectToRDS" />
+        <item itemvalue="Go Build.go build ConnectToRDS (1)" />
         <item itemvalue="Go Build.go build serviceExtractUserData (1)" />
-        <item itemvalue="Go Build.go build serviceExtractUserData/sendFiles" />
-        <item itemvalue="Go Build.serviceExtractUserData/sendFiles" />
-        <item itemvalue="Go Build.go build serviceExtractUserData" />
-        <item itemvalue="Go Build.go build serviceExtractUserData" />
       </list>
     </recent_temporary>
   </component>
@@ -264,22 +244,24 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="2338" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580833059552">
+    <state x="2338" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581072346742">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2338" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580833059552" />
+    <state x="2338" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581072346742" />
     <state x="470" y="219" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580229894701" />
     <state x="2551" y="343" width="675" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579532488537">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2551" y="343" width="675" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579532488537" />
-    <state x="667" y="248" width="642" height="609" key="#go_build_ConnectToRDS" timestamp="1580226300491">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state x="2542" y="227" width="642" height="609" key="#go_build_ConnectToRDS" timestamp="1580838751050">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2542" y="227" key="#go_build_ConnectToRDS/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580838751050" />
     <state x="667" y="248" width="642" height="609" key="#go_build_ConnectToRDS/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580226300491" />
-    <state x="667" y="248" width="642" height="609" key="#go_build_ConnectToRDS_(1)" timestamp="1580226320791">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state x="2542" y="227" width="642" height="609" key="#go_build_ConnectToRDS_(1)" timestamp="1580902811390">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2542" y="227" width="642" height="609" key="#go_build_ConnectToRDS_(1)/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580902811390" />
     <state x="667" y="248" width="642" height="609" key="#go_build_ConnectToRDS_(1)/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580226320791" />
     <state x="2542" y="227" width="642" height="609" key="#go_build_ConnectToRDS_(2)" timestamp="1580470684015">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -298,45 +280,45 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580812639320" />
-    <state width="1874" height="357" key="GridCell.Tab.0.bottom" timestamp="1580836955450">
+    <state width="1874" height="287" key="GridCell.Tab.0.bottom" timestamp="1581074038229">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="357" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580836955450" />
+    <state width="1874" height="287" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581074038229" />
     <state width="1874" height="354" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580470564999" />
-    <state width="1874" height="357" key="GridCell.Tab.0.center" timestamp="1580836955449">
+    <state width="1874" height="287" key="GridCell.Tab.0.center" timestamp="1581074038229">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="357" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580836955449" />
+    <state width="1874" height="287" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581074038229" />
     <state width="1874" height="354" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580470564999" />
-    <state width="1874" height="357" key="GridCell.Tab.0.left" timestamp="1580836955449">
+    <state width="1874" height="287" key="GridCell.Tab.0.left" timestamp="1581074038229">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="357" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580836955449" />
+    <state width="1874" height="287" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581074038229" />
     <state width="1874" height="354" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580470564999" />
-    <state width="1874" height="357" key="GridCell.Tab.0.right" timestamp="1580836955449">
+    <state width="1874" height="287" key="GridCell.Tab.0.right" timestamp="1581074038229">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="357" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580836955449" />
+    <state width="1874" height="287" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581074038229" />
     <state width="1874" height="354" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580470564999" />
-    <state width="1874" height="294" key="GridCell.Tab.1.bottom" timestamp="1580836769205">
+    <state width="1874" height="435" key="GridCell.Tab.1.bottom" timestamp="1580902814390">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="294" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580836769205" />
+    <state width="1874" height="435" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580902814390" />
     <state width="1874" height="354" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580470564999" />
-    <state width="1874" height="294" key="GridCell.Tab.1.center" timestamp="1580836769205">
+    <state width="1874" height="435" key="GridCell.Tab.1.center" timestamp="1580902814390">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="294" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580836769205" />
+    <state width="1874" height="435" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580902814390" />
     <state width="1874" height="354" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580470564999" />
-    <state width="1874" height="294" key="GridCell.Tab.1.left" timestamp="1580836769205">
+    <state width="1874" height="435" key="GridCell.Tab.1.left" timestamp="1580902814390">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="294" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580836769205" />
+    <state width="1874" height="435" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580902814390" />
     <state width="1874" height="354" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580470564999" />
-    <state width="1874" height="294" key="GridCell.Tab.1.right" timestamp="1580836769205">
+    <state width="1874" height="435" key="GridCell.Tab.1.right" timestamp="1580902814390">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="294" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580836769205" />
+    <state width="1874" height="435" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580902814390" />
     <state width="1874" height="354" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1580470564999" />
     <state x="2369" y="174" key="SettingsEditor" timestamp="1580811973365">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -351,9 +333,20 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2415" y="278" width="920" height="522" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580833070999" />
-    <state x="2528" y="270" width="704" height="538" key="find.popup" timestamp="1580836508662">
+    <state x="2528" y="270" width="716" height="538" key="find.popup" timestamp="1581089264588">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2528" y="270" width="704" height="538" key="find.popup/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580836508662" />
+    <state x="2528" y="270" width="716" height="538" key="find.popup/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1581089264588" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/serviceExtractUserdata/dbReplica/replica.go</url>
+          <line>138</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
