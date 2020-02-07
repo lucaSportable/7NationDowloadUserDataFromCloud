@@ -7,5 +7,6 @@ require (
 	github.com/aws/aws-sdk-go-v2 v0.18.0
 	github.com/jinzhu/gorm v1.9.12
 	github.com/kylelemons/go-gypsy v0.0.0-20160905020020-08cad365cd28 // indirect
+	github.com/lib/pq v1.1.1
 	github.com/ziutek/mymysql v1.5.4 // indirect
 )

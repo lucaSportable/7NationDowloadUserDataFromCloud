@@ -1,17 +1,16 @@
 package dbReplica
 
 import (
-	"bitbucket.org/liamstask/goose/lib/goose"
 	"database/sql"
 	"fmt"
 	"github.com/aws/aws-sdk-go-v2/aws/external"
 	"github.com/aws/aws-sdk-go-v2/service/rds/rdsutils"
 	"github.com/jinzhu/gorm"
+	_ "github.com/lib/pq"
 	"io"
 	"log"
 	"os"
 	"os/exec"
-	"time"
 )
 
 const (
@@ -26,9 +25,10 @@ const (
 )
 
 // createSessionDB creates a new postgres database for a session and returns a connection to it.
-func CreateTmpUserDataDB(db*gorm.DB, dbname string)(err error){
+func CreateTmpUserDataDB(dbname ,templateDbName string)(err error){
+	db := RdsConnect(templateDbName)
 	// create new database
-	command := fmt.Sprintf("create database \"%v\" with owner %v", dbname, dbUser)
+	command := fmt.Sprintf("create database \"%v\" template %s", dbname,templateDbName)
 	errs := db.Exec(command).GetErrors()
 	if len(errs) > 0 {
 		return errs[0]
@@ -58,7 +58,7 @@ func connString(dbname string, localhost bool)string{
 	}
 	//Use db to perform SQL operations on database
 	remoteConnString := fmt.Sprintf("host=%v user=%v dbname=%v password=%v port=%v sslmode=verify-full sslrootcert=%v", dbEndpoint, dbUser, dbname, authToken, dbPort, cert)
-	//fmt.Println(remoteConnString)
+	fmt.Println(remoteConnString)
 	return remoteConnString
 }
 
@@ -87,28 +87,29 @@ func DeleteTmpUserDataDB(db*gorm.DB, dbname string){
 // MigrateSchema execute all gorm migration and the export of the user rows.
 func MigrateSchema(DB *sql.DB,dest string, userId string) {
 	//Directory to the db folder or the migration folder within
-	var conf = goose.DBConf{
-		MigrationsDir: migrationPath,
-		// Call it whatever you want
-		Env: "testRandom",
-		// postgres TODO: update the driver
-		Driver: goose.DBDriver{Name:"postgres", OpenStr:dest, Import:"github.com/lib/pq",Dialect:goose.PostgresDialect{}},
-		//public
-		PgSchema: "public",
-	}
-	version, err:= goose.GetMostRecentDBVersion(migrationPath)
-	TmpLogError(err)
-	// execution time
-	start := time.Now()
-	err = goose.RunMigrationsOnDb(&conf, migrationPath, version, DB)
-	fmt.Println("migrationTime:"+time.Now().Sub(start).String())
-
-	TmpLogError(err)
-	fmt.Println("to execute\n",dest)
+	//var conf = goose.DBConf{
+	//	MigrationsDir: migrationPath,
+	//	// Call it whatever you want
+	//	Env: "testRandom",
+	//	// postgres TODO: update the driver
+	//	Driver: goose.DBDriver{Name:"postgres", OpenStr:dest, Import:"github.com/lib/pq",Dialect:goose.PostgresDialect{}},
+	//	//public
+	//	PgSchema: "public",
+	//}
+	//version, err:= goose.GetMostRecentDBVersion(migrationPath)
+	//TmpLogError(err)
+	//// execution time
+	//start := time.Now()
+	//err = goose.RunMigrationsOnDb(&conf, migrationPath, version, DB)
+	//fmt.Println("migrationTime:"+time.Now().Sub(start).String())
+	//
+	//TmpLogError(err)
+	//fmt.Println("to execute\n",dest)
 	// Execute all the import queries
+	//DB.Exec()
 	gdb, err := gorm.Open("postgres", DB)
 	TmpLogError(err)
-
+	TmpLogError(gdb.Exec("CREATE EXTENSION dblink;").Error)
 	ExportQueries(gdb,dest,userId)
 }
 
@@ -122,7 +123,7 @@ func ExportUserData(userId string,w io.Writer)error{
 	cfg.Region = awsRegion
 	dbNameToSave := userId
 	// create database for that id log in case of error
-	TmpLogError(CreateTmpUserDataDB(RdsConnect(DbNameOrigin), dbNameToSave))
+	TmpLogError(CreateTmpUserDataDB( dbNameToSave, DbNameOrigin+"_template"))
 	// connect to origin and destination and defer
 	dbMaster := RdsConnect(DbNameOrigin)
 	dbSlave := RdsConnect(dbNameToSave)
@@ -145,7 +146,7 @@ func ExportUserData(userId string,w io.Writer)error{
 // DumpPostgres dump from postgres.
 func DumpPostgres(databaseName string, writer io.Writer) error{
 	// execute command
-	cmd := exec.Command("pg_dump", "-Z6", connString(databaseName,false))
+	cmd := exec.Command("pg_dump", "-Z6","--data-only", connString(databaseName,false))
 	cmd.Stdout = writer
 	err := cmd.Run()
 	return err
