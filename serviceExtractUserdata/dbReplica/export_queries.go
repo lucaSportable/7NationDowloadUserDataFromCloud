@@ -1,8 +1,9 @@
 package dbReplica
 
 import (
-	"errors"
+	"fmt"
 	"github.com/jinzhu/gorm"
+	"strings"
 )
 
 func ExportQueries(db *gorm.DB,dest string,userId string){
@@ -114,9 +115,8 @@ func ExportQueries(db *gorm.DB,dest string,userId string){
 		` where teams.id = coaches.team_id AND coaches.user_id = `+userId+
 		` );') as players_sessions_scrums(id int4,player_session_id int8,scrum_id int8,scrum_index int4);`,
 	}
-	for _,query := range querys{
-		if 	err := db.Exec(query).Error;err != nil {
-			TmpLogError(errors.New(query + err.Error()))
+	//for _,query := range querys{
+		if 	errs := db.Exec(strings.Join(querys,";")).GetErrors();errs != nil {
+			TmpLogError(fmt.Errorf("%v",errs))
 		}
-	}
 }

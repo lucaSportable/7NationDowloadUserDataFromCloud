@@ -58,7 +58,7 @@ func connString(dbname string, localhost bool)string{
 	}
 	//Use db to perform SQL operations on database
 	remoteConnString := fmt.Sprintf("host=%v user=%v dbname=%v password=%v port=%v sslmode=verify-full sslrootcert=%v", dbEndpoint, dbUser, dbname, authToken, dbPort, cert)
-	fmt.Println(remoteConnString)
+	//fmt.Println(remoteConnString)
 	return remoteConnString
 }
 
@@ -86,27 +86,6 @@ func DeleteTmpUserDataDB(db*gorm.DB, dbname string){
 
 // MigrateSchema execute all gorm migration and the export of the user rows.
 func MigrateSchema(DB *sql.DB,dest string, userId string) {
-	//Directory to the db folder or the migration folder within
-	//var conf = goose.DBConf{
-	//	MigrationsDir: migrationPath,
-	//	// Call it whatever you want
-	//	Env: "testRandom",
-	//	// postgres TODO: update the driver
-	//	Driver: goose.DBDriver{Name:"postgres", OpenStr:dest, Import:"github.com/lib/pq",Dialect:goose.PostgresDialect{}},
-	//	//public
-	//	PgSchema: "public",
-	//}
-	//version, err:= goose.GetMostRecentDBVersion(migrationPath)
-	//TmpLogError(err)
-	//// execution time
-	//start := time.Now()
-	//err = goose.RunMigrationsOnDb(&conf, migrationPath, version, DB)
-	//fmt.Println("migrationTime:"+time.Now().Sub(start).String())
-	//
-	//TmpLogError(err)
-	//fmt.Println("to execute\n",dest)
-	// Execute all the import queries
-	//DB.Exec()
 	gdb, err := gorm.Open("postgres", DB)
 	TmpLogError(err)
 	TmpLogError(gdb.Exec("CREATE EXTENSION dblink;").Error)
@@ -155,6 +134,5 @@ func DumpPostgres(databaseName string, writer io.Writer) error{
 func TmpLogError(err error){
 	if err != nil{
 		log.Println(err.Error())
-		// TODO: panic on purpose and catch it in the main
 	}
 }

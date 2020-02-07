@@ -12,6 +12,22 @@ import (
 
 
 // TODO: consider the authentication token, caching of the operation itself.
+var Cb chan bool
+func init(){
+	Cb = make(chan bool,1)
+}
+
+// middleware cs
+
+func CriticalSection(f func(w http.ResponseWriter, r *http.Request)) func(http.ResponseWriter, *http.Request) {
+	// get token either from url or Auth header
+	return func(w http.ResponseWriter, r *http.Request) {
+		Cb <- true
+		f(w,r)
+		defer func(){<- Cb}()
+	}
+}
+
 
 
 func localUserData(w http.ResponseWriter, r*http.Request) {
@@ -43,7 +59,7 @@ func main(){
 	flag.Parse() // parse the flags
 
 	// routes
-	http.HandleFunc("/localUserData/",localUserData)
+	http.HandleFunc("/localUserData/",CriticalSection(localUserData))
 
 	// start the web server
 	log.Println("Starting web server on", *addr)
