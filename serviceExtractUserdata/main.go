@@ -5,16 +5,16 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"serviceExtractUserData/dbReplica"
+	"serviceExtractUserData/dbreplica"
 	"strings"
 	"time"
 )
 
-
 // TODO: consider the authentication token, caching of the operation itself.
 var Cb chan bool
-func init(){
-	Cb = make(chan bool,1)
+
+func init() {
+	Cb = make(chan bool, 1)
 }
 
 // middleware cs
@@ -23,14 +23,12 @@ func CriticalSection(f func(w http.ResponseWriter, r *http.Request)) func(http.R
 	// get token either from url or Auth header
 	return func(w http.ResponseWriter, r *http.Request) {
 		Cb <- true
-		f(w,r)
-		defer func(){<- Cb}()
+		f(w, r)
+		defer func() { <-Cb }()
 	}
 }
 
-
-
-func localUserData(w http.ResponseWriter, r*http.Request) {
+func localUserData(w http.ResponseWriter, r *http.Request) {
 	start := time.Now()
 	segs := strings.Split(r.URL.Path, "/")
 	if len(segs) < 3 {
@@ -39,27 +37,28 @@ func localUserData(w http.ResponseWriter, r*http.Request) {
 		return
 	}
 	userId := segs[2]
-	if len(userId)==0{
-		userId="defaultTmpDatabase"
+
+	if len(userId) == 0 {
+		http.Error(w,fmt.Sprintf("Wrong User Id= %s",userId),http.StatusForbidden)
+		return
 	}
-	sendFile:=userId+".gz"//time.Now().String()+".gz"
+	sendFile := userId + ".gz" //time.Now().String()+".gz"
 	w.Header().Set("Content-Disposition", "attachment; filename="+sendFile)
 
-	if err :=dbReplica.ExportUserData(userId,w);err != nil {
+	if err := dbreplica.ExportUserData(userId, w); err != nil {
 		http.Error(w, err.Error(), 500)
 		return
 	}
-	fmt.Println("totalEndpoint:"+time.Now().Sub(start).String())
+	fmt.Println("totalEndpoint:" + time.Now().Sub(start).String())
 
 }
 
-
-func main(){
+func main() {
 	var addr = flag.String("host", ":8080", "The addr of the application.")
 	flag.Parse() // parse the flags
 
 	// routes
-	http.HandleFunc("/localUserData/",CriticalSection(localUserData))
+	http.HandleFunc("/localUserData/", CriticalSection(localUserData))
 
 	// start the web server
 	log.Println("Starting web server on", *addr)
